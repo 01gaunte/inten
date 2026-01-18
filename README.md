@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InTen Platform
+
+**10-minute expert consultations marketplace**
+
+InTen is a revolutionary platform connecting people who need quick expert advice with consultants who can provide value in just 10 minutes. Built with modern web technologies for speed, scalability, and user experience.
+
+## Project Status
+
+**Phase 1: Foundation - Point 1 COMPLETED**
+
+- Next.js 14 project initialized with App Router
+- Tailwind CSS configured with custom design tokens
+- GitHub repository created and connected
+- Vercel deployment pipeline established
+- Environment variables template ready
+
+## Links
+
+- **Production:** https://inten-six.vercel.app
+- **GitHub:** https://github.com/01gaunte/inten
+- **Roadmap:** See `INTEN_ROADMAP.md` in parent directory
+
+## Technology Stack
+
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| Framework | Next.js 14 (App Router) | Server-side rendering, routing |
+| Styling | Tailwind CSS | Utility-first styling |
+| Authentication | Clerk | User authentication & management |
+| Database | Neon (PostgreSQL) | Serverless database |
+| Hosting | Vercel | Deployment & hosting |
+| Calendar | Cal.com | Booking & scheduling |
+| Video | Daily.co | Video calls |
+| Payments | Stripe Connect | Marketplace payments |
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- Git
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/01gaunte/inten.git
+cd inten
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.local.example .env.local
+# Edit .env.local with your API keys
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+inten/
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   ├── components/       # React components
+│   │   ├── ui/          # Shared UI components
+│   │   ├── forms/       # Form components
+│   │   ├── booking/     # Booking-specific
+│   │   └── video/       # Video call components
+│   ├── lib/             # Utilities and helpers
+│   └── types/           # TypeScript type definitions
+├── prisma/              # Database schema
+└── public/              # Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+See [INTEN_ROADMAP.md](../INTEN_ROADMAP.md) for detailed 10-point development plan.
 
-## Deploy on Vercel
+### Next Steps (Point 2)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Integrate Clerk authentication
+- Configure sign-up/sign-in flows
+- Implement protected routes
+- Create onboarding flow
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+This project is currently in active development. Contribution guidelines will be added as the project matures.
+
+## License
+
+Copyright 2026 Adam Matthews / Bia Electric. All rights reserved.
